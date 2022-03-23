@@ -1,6 +1,3 @@
-/* Database schema to keep the structure of entire database. */
-
-
 CREATE TABLE animals (
     id INT GENERATED ALWAYS AS IDENTITY,
     name VARCHAR (50),
@@ -9,3 +6,5 @@ CREATE TABLE animals (
     neutered BOOLEAN,
     weight_kg DECIMAL
 );
+
+ALTER TABLE animals ADD COLUMN spicies VARCHAR(50); 
