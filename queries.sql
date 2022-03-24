@@ -24,3 +24,19 @@ BEGIN;
 DELETE FROM animals;
 ROLLBACK;
 select * from animals;
+
+BEGIN;
+DELETE FROM animals WHERE date_of_birth > '2022-01-01';
+SAVEPOINT SAVEPOINT_DELETED_DATE;
+UPDATE animals SET weight_kg = weight_kg * -1;
+ROLLBACK TO SAVEPOINT_DELETED_DATE;
+UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
+COMMIT;
+
+-- ANSWER TO QUESTIONS
+SELECT COUNT(*) FROM animals;
+SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
+SELECT AVG(weight_kg) FROM animals;
+SELECT MAX(escape_attempts) FROM animals GROUP BY neutered;
+SELECT MAX(weight_kg), MIN(weight_kg) FROM animals GROUP by spicies;
+SELECT AVG(escape_attempts) FROM animals WHERE date_of_birth Between '1990-01-01' AND '2000-12-31' GROUP BY spicies;
