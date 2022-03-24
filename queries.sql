@@ -11,9 +11,16 @@ BEGIN; /* begin the transaction */
 UPDATE animals SET spicies = 'unspecified';
 ROLLBACK; /* revert changes */
 
+-- UPDATE SPICIES AND COMMIT
 BEGIN;
 UPDATE animals SET spicies = 'digimon'  WHERE name like '%mon';
 UPDATE animals SET spicies = 'pokemon' WHERE spicies = '';
 select * from animals;
 COMMIT;
+select * from animals;
+
+-- DELETE ALL RECORDS AND REVERT CHANGES
+BEGIN;
+DELETE FROM animals;
+ROLLBACK;
 select * from animals;
