@@ -58,9 +58,7 @@ CREATE TABLE visits (
 );
 
 -- PERFORMANCE AND NORMALIZATION
-
 -- Add an email column to your owners table
-ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
 CREATE INDEX gen_visits_id_asc ON visits(animals_id ASC);
 CREATE INDEX vets_id_gen ON visits(vets_id);
