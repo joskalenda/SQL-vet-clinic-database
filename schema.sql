@@ -24,7 +24,7 @@ CREATE TABLE species (
     PRIMARY KEY (id)
 );
 
-ALTER animals ADD PRIMARY KEY(id);
+ALTER TABLE animals ADD PRIMARY KEY(id);
 ALTER TABLE animals DROP COLUMN spicies;
 ALTER TABLE animals ADD COLUMN species_id INTEGER, ADD CONSTRAINT FK_SPECIES FOREIGN KEY (species_id) REFERENCES species(id);
 ALTER TABLE animals ADD COLUMN owner_id INTEGER, ADD CONSTRAINT FK_OWNERS FOREIGN KEY(owner_id) REFERENCES owners (id);
@@ -56,3 +56,10 @@ CREATE TABLE visits (
     FOREIGN KEY (vets_id) REFERENCES vets (id),
     PRIMARY KEY (id)
 );
+
+-- PERFORMANCE AND NORMALIZATION
+-- Add an email column to your owners table
+
+CREATE INDEX gen_visits_id_asc ON visits(animals_id ASC);
+CREATE INDEX vets_id_gen ON visits(vets_id);
+CREATE INDEX gen_owners_email_asc ON owners(email ASC);

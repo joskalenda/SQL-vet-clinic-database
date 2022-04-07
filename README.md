@@ -1,8 +1,3 @@
-# curriculum-databases-projects-template
-
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
-
 
 ## Getting Started
 
@@ -15,17 +10,17 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## Authors
 
-👤 **Author1**
+👤 **Jos Kalenda**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Jos Kalenda](https://github.com/joskalenda)
+- Twitter: [@Jos Kalenda](https://twitter.com/joskalenda)
+- LinkedIn: [@Jos Kalenda](https://linkedin.com/in/joskalenda)
 
-👤 **Author2**
+👤 **Farouq Daif**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@git](https://github.com/farouqdaif)
+- Twitter: [@twitterhandle](https://twitter.com/farouqdaif)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/farouqdaif)
 
 ## 🤝 Contributing
 
